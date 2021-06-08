@@ -1,0 +1,7 @@
+PORT=1337
+NODE_ENV=production
+KONGA_HOOK_TIMEOUT=120000
+DB_ADAPTER=mongo
+DB_URI=mongodb://konga-database:27017/konga
+KONGA_LOG_LEVEL=warn
+TOKEN_SECRET=Demo123
