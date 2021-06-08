@@ -23,7 +23,6 @@ chgrp -R 0 /usr/bin/run /home/konga /opt && \
 chmod -R g=u /usr/bin/run /home/konga /opt
 
 RUN chmod -R 775 /usr/bin/run
-RUN chown -R node:root /usr/bin/run
 
 USER 1001
 
