@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM quay.io/libpod/alpine
 
 RUN apk add --no-cache --update git curl busybox-suid shadow busybox-extras nodejs npm
 
