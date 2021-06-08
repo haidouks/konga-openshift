@@ -7,7 +7,7 @@ WORKDIR /opt
 RUN adduser -D -u 1001 konga && usermod -aG 0 konga && \
 chown -R 1001 /home/konga /opt
 
-USER 1001
+USER 1000
  
 RUN git clone https://github.com/pantsel/konga.git && cd konga && \
 npm set audit false && \
@@ -22,7 +22,10 @@ RUN mkdir -p /opt/konga/custom_config && chown -R 1001 /usr/bin/run /home/konga 
 chgrp -R 0 /usr/bin/run /home/konga /opt && \
 chmod -R g=u /usr/bin/run /home/konga /opt
 
-USER 1001
+RUN chmod -R 775 /usr/bin/run
+RUN chown -R node:root /usr/bin/run
+
+USER 1000
 
 EXPOSE 1337
 
